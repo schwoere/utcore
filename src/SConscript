@@ -23,6 +23,10 @@
 import sys
 import os.path
 
+have_boost = False
+have_tinyxml = False
+have_log4cpp = False
+
 Import ( '*' )
 
 # a)
