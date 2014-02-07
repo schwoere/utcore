@@ -170,11 +170,11 @@ std::pair < Math::ErrorPose , double >
 		OPT_LOG_DEBUG( "Estimated pose: " << finalPose << ", residual: " << res );
 
 		// Everything went fine -  set weight to 1.0 and return pose
-		return std::make_pair < Math::ErrorPose, double > (finalPose, res);
+		return std::make_pair(finalPose, res);
 	} else { // not enough observations
 
 		LOG4CPP_DEBUG( logger, "Not enough observations. Only "<<minObs<<" observations available for some camera ");
-		return std::make_pair < Math::ErrorPose, double > (Math::ErrorPose(), -1.0);
+		return std::make_pair(Math::ErrorPose(), -1.0);
 	}
 }
 

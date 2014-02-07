@@ -35,6 +35,7 @@ if have_boost:
 	opts.Add( 'LAPACK_LIBPATH', 'Path to the lapack libraries', default_lapack_libpath )
 
 	libName = "LAPACK"
+	#[{additional compile settings}, {include files}, {language (C++)},{library to link against (optional)}, {source code (optional)}]
 	compileSettings =  [boost_options , "" , "C", "dgesvd_"]
 	libFinder = standardLibFinder(libName,compileSettings)
 	configHelper = standardLibConfig(libName, libFinder)

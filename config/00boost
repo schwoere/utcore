@@ -53,6 +53,10 @@ if sys.platform == 'win32':
 		default_lib_suffix = '-vc90-mt'
 	elif msvs_version == '10.0':
 		default_lib_suffix = '-vc100-mt'
+	elif msvs_version == '11.0':
+		default_lib_suffix = '-vc110-mt'
+	elif msvs_version == '12.0':
+		default_lib_suffix = '-vc120-mt'
 	else:
 		default_lib = '-vc80-mt'
 		
@@ -71,6 +75,9 @@ boost_libs = lambda l: boost_libs_proto( l, opts[ 'BOOST_SUFFIX' ] )
 compileSettings =  [{} , "boost/thread.hpp", "C++", boost_libs( "thread" ), "boost::mutex m; boost::mutex::scoped_lock l( m );"]
 libFinder = standardLibFinder(libName,compileSettings)
 
+# in windows boost libs are linked automatically
+if sys.platform == 'win32':
+	libFinder.setIfValueExists('LIBS',[])
 
 configHelper = standardLibConfig(libName, libFinder)
 
