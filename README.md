@@ -1,6 +1,6 @@
 utcore
 ========
-This is the utfacade Ubitrack submodule.
+This is the utcore Ubitrack submodule.
 
 Usage
 -----
