@@ -10,7 +10,7 @@ Usage
 -----
 In order to use it, you have to clone the buildenvironment, change to the ubitrack directory and add the utcore by executing:
 
-    git submodule add https://github.com/schwoere/utcore.git modules/utcore
+    git submodule add https://github.com/Ubitrack/utcore.git modules/utcore
 
 Dependencies
 ----------
